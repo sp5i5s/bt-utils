@@ -12,7 +12,6 @@ var array = require('./modules/array');
 var string = require('./modules/string');
 var math = require('./modules/math');
 
-
 base.prototype = {
 	constructor : base,
 	https : https,
@@ -48,5 +47,5 @@ base.prototype = {
 // ]
 // log(bt.array.getInfo(list,'name','tony'))
 
-// let s = '笔是';
-// log(s.is_chinese());
+// let s = '18021071789';
+// log(s.is_mobile());
