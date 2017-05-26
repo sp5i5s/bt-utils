@@ -14,13 +14,6 @@ class string extends base{
     constructor(){
 		  super();
 	}
-    // 在string中返回指定value的info
-    getInfo(string,key,value){
-        var info = string.find(function(c, index, arr){
-          return c[key] == value;
-        })
-        return info || null;
-    }
 }
 
 module.exports = string.prototype

@@ -1,7 +1,7 @@
 {
-	"name":"pylyglot",
+	"name":"bt_utils",
 	"version":"1.0.0",
-	"description":"Series of articles for Polyglot Python with PyCharm",
+	"description":"bt utils",
 	"main":"index.js",
 	"scripts": {
 		"dev": "webpack-dev-server --content-base ./ --inline --hot --compress --history-api-fallback --config webpack.config.js"
@@ -13,9 +13,9 @@
 	"author":"Paul Everitt",
 	"license":"ISC",
 	"bugs": {
-	"url":"https://github.com/pauleveritt/pauleveritt.github.io/issues"
+	"url":"https://github.com/sp5i5s/bt-utils"
 	 },
-	"homepage":"https://github.com/pauleveritt/pauleveritt.github.io#readme",
+	"homepage":"https://github.com/sp5i5s",
 	"devDependencies": {
 	 "babel": "^6.23.0",
     "babel-core": "^6.23.1",
