@@ -1,14 +1,19 @@
+var base = require('./base');
+var res = require('./res/rules');
+
 var p = String.prototype;
 
-// 自定义Join，将数组中的指定属性拼接返回[{name : 'brandon'},{name : 'tony'},{name : 'tony'}]
-p.empty = function(){
-  if (this.toString().trim().replace(/(^s*)|(s*$)/g, "").length == 0 ){
-        return false;
+// 加入一系列原生字符校验
+for(let fn in res.default){
+    p['is_' + fn] = function(){
+       return res.default[fn].call(this,this);
     }
-    return true;
-};
+}
 
-class string{
+class string extends base{
+    constructor(){
+		  super();
+	}
     // 在string中返回指定value的info
     getInfo(string,key,value){
         var info = string.find(function(c, index, arr){
@@ -18,4 +23,4 @@ class string{
     }
 }
 
-module.exports = string
+module.exports = string.prototype

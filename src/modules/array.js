@@ -21,7 +21,11 @@ p._distinct = function () {
   return newArr;  
 }
 
-class array{
+var base = require('./base');
+class array extends base{
+    constructor(){
+		  super();
+	  }
     // 在Array中返回指定value的info
     getInfo(array,key,value){
         var info = array.find(function(c, index, arr){
@@ -31,4 +35,4 @@ class array{
     }
 }
 
-module.exports = array
+module.exports = array.prototype

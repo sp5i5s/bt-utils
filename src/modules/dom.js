@@ -18,4 +18,4 @@ class dom extends base{
     }
 }
 
-module.exports = dom;
+module.exports = dom.prototype;

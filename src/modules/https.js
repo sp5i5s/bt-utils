@@ -78,5 +78,4 @@ class https extends base{
         location.reload()
     }
 }
-
-module.exports = https
+module.exports = https.prototype

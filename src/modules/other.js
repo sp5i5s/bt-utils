@@ -22,4 +22,4 @@ class other extends base{
     }
 }
 
-module.exports = other;
+module.exports = other.prototype;

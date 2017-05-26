@@ -25,4 +25,4 @@ class msg extends base{
     
 }
 
-module.exports = msg;
+module.exports = msg.prototype

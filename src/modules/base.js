@@ -1,7 +1,7 @@
-class base{
+class bt{
     log(val){
         console.log(val);
     }
 }
 
-module.exports = base;
+module.exports = bt;
