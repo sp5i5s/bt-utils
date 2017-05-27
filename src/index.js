@@ -30,6 +30,7 @@ base.prototype = {
 
 })(window);
 
+// 使用说明
 // bt.https.delete('http://localhost:9087/api.php/basics/base/get_grade/?school_id=122&district_id=null',(result)=>{
 // 	log(result);
 // })
@@ -49,3 +50,35 @@ base.prototype = {
 
 // let s = '18021071789';
 // log(s.is_mobile());
+
+var obj = {
+    name : 'brandon',
+	address : {
+		city : 'sh',
+		book : {
+			name : 'c#'
+		}
+	}	
+}
+
+function copy(obj){
+	var list = {};
+	for(let item in obj){
+		if( typeof obj[item] === 'object'){
+			list[item] = copy(obj[item]);
+			;
+		}else{
+			list[item] = obj[item];
+		}
+	}
+
+	return list;
+}
+
+var list = copy(obj);
+list.name = 'jack';
+list.address.city = 'ah';
+list.address.book.name = 'php';
+bt.log(obj);
+bt.log(list);
+
