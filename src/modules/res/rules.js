@@ -2,7 +2,7 @@
 
 var rules = {
 	// 是否为空
-	required : function(value){
+	empty : function(value){
 		if(!value){
 			return false;
 		}

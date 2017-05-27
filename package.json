@@ -1,14 +1,15 @@
 {
-  "name": "bt_utils",
-  "version": "1.0.0",
+  "name": "bt-utils",
+  "version": "1.0.1",
   "description": "bt utils",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base ./ --inline --hot --compress --history-api-fallback --config webpack.config.js"
+    "dev": "webpack-dev-server --content-base ./ --inline --hot --compress --history-api-fallback --config webpack.config.js",
+    "pub": "webpack --progress --hide-modules --config webpack.pub.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/pauleveritt/pauleveritt.github.io.git"
+    "url": "https://github.com/sp5i5s/bt-utils.git"
   },
   "author": "Paul Everitt",
   "license": "ISC",
