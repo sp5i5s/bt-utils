@@ -1,3 +1,4 @@
+### 工具类库，部分依赖layer和axios
 #### 安装
 > npm|cnpm install bt-utils
 #### 使用
