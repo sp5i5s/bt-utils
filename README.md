@@ -1,4 +1,4 @@
-####安装
+#### 安装
 npm|cnpm install bt-utils
 
 ####使用
