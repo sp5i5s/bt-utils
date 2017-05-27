@@ -1,5 +1,5 @@
 #### 安装
->> npm|cnpm install bt-utils<br><br>
+> npm|cnpm install bt-utils<br><br>
 
 #### 使用
 > window.bt.https,支持get,post.put,delete<br>
