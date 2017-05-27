@@ -1,7 +1,7 @@
-安装
+####安装
 npm|cnpm install bt-utils
 
-使用
+####使用
 window.bt.https,支持get,post.put,delete
 window.bt.string,全局String校验，比如"test".is_empty(),"test".is_mobile();
 window.bt.array,数组操作类，常规去重、指定键与值返回实体
