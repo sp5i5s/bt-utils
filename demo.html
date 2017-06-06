@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <script src="jquery-2.0.3.js"></script>
+    <style>
+        html,body{margin:0;padding:0;}
+        .warp{width:800px;border:1px solid #ccc;margin:auto;padding:20px;margin-top:20px;}
+        .warp h1{font-size: 14px;}
+        .warp p{font-size: 14px;}
+    </style>
+</head>
+<body>
+    
+<div class="warp">
+    <div class="box order"> 
+        <h1>初始化对象或返回值为空</h1>
+        <p>
+            在实例化对象时（例如，从数据库中取出一条订单数据，实例化一个订单对象），某些字段字段为空。而后面定逻辑需要使用这个字段时，没有进行判空。或者在一些远程调用过程中，返回的对象有可能是空，或者某些字段为空，在后面的使用中，没有判空。
+            <input type="type" class="number">
+            <button>取订单</button>
+            <p class="result"></p>
+        </p>
+    </div>
+</div>
+
+<script>
+    // 订单构造
+    function order(){
+        
+    }
+    // 获取某一个订单
+    order.prototype.get = function(number){
+        if(number == ''){
+            //$('.order .result').html('错误，没有订单号')
+            throw new Error('没有订单号');
+        }else{
+            $('.order .result').html(`正确，订单号为：${number}`);
+        }
+
+
+    }
+
+    $('.order button').click(function(e){
+        new order().get($('.order input').val());
+    })
+</script>
+</body>
+</html>

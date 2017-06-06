@@ -61,24 +61,3 @@ var obj = {
 	}	
 }
 
-function copy(obj){
-	var list = {};
-	for(let item in obj){
-		if( typeof obj[item] === 'object'){
-			list[item] = copy(obj[item]);
-			;
-		}else{
-			list[item] = obj[item];
-		}
-	}
-
-	return list;
-}
-
-var list = copy(obj);
-list.name = 'jack';
-list.address.city = 'ah';
-list.address.book.name = 'php';
-bt.log(obj);
-bt.log(list);
-

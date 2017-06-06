@@ -1,17 +1,16 @@
 /*
-    依赖axios插件
- */
+依赖axios插件
+*/
 
 var axios = require('axios')
 var base  = require('./base')
 var qs = require('qs');
 
 class https extends base{
-
     constructor(){
-		super();
+        super();
         this.init();
-	}
+    }
     // init
     init(){
         
@@ -33,7 +32,7 @@ class https extends base{
         }
 
         axios[this.type](args.url).then((result)=>{
-          return fn(result);
+            return fn(result);
         });
     }
     // header头参数
@@ -56,7 +55,7 @@ class https extends base{
     _post(_args,_fn){
         let conf = { 'Content-Type' : conf };
         axios[this.type](_args.url,qs.stringify(_args.data),conf).then((result)=>{
-          return _fn ? _fn(result) : result;
+            return _fn ? _fn(result) : result;
         });
     }
     // post实例方法
