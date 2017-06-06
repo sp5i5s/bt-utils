@@ -17,9 +17,13 @@ p._distinct = function () {
       newArr.push(this[i]);    
       obj[typeof(this[i]) + this[i]] = 'new';    
     }    
-  }    
+  }
   return newArr;  
-}
+};
+// 尝试克隆一个数组
+p._clone = function(){
+  return this.slice(0);
+};
 
 var base = require('./base');
 class array extends base{
