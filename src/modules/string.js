@@ -14,6 +14,13 @@ class string extends base{
     constructor(){
 		  super();
 	}
+
+    // 全局字符替换
+    replace(str,old_value,new_value){
+        var reg = new RegExp(old_value,"g"); 
+        return str.replace(reg, new_value); 
+    }
+    // 计算文本长度
 }
 
 module.exports = string.prototype

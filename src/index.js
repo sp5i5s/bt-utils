@@ -10,7 +10,10 @@ var msg = require('./modules/msg');
 var other = require('./modules/other');
 var array = require('./modules/array');
 var string = require('./modules/string');
-var math = require('./modules/math');
+var object = require('./modules/object');
+var event = require('./modules/event');
+var uri = require('./modules/uri');
+var _window = require('./modules/window');
 
 base.prototype = {
 	constructor : base,
@@ -20,7 +23,10 @@ base.prototype = {
 	array : array,
 	string : string,
 	other : other,
-	math : math,
+	object : object,
+	event : event,
+	uri : uri,
+	window : _window,
 	log : base.prototype.log,
 }
 
@@ -29,6 +35,7 @@ base.prototype = {
 	W.bt = new base();
 
 })(window);
+
 
 // 使用说明
 // bt.https.delete('http://localhost:9087/api.php/basics/base/get_grade/?school_id=122&district_id=null',(result)=>{
@@ -51,13 +58,19 @@ base.prototype = {
 // let s = '18021071789';
 // log(s.is_mobile());
 
-var obj = {
-    name : 'brandon',
-	address : {
-		city : 'sh',
-		book : {
-			name : 'c#'
-		}
-	}	
-}
+// var obj = {
+//     name : 'brandon',
+// 	address : {
+// 		city : 'sh',
+// 		book : {
+// 			name : 'c#'
+// 		}
+// 	}	
+// }
 
+// bt.log(obj);
+// var obj2 = bt.object.clone(obj);
+// obj2.name = 'jack';
+// obj2.address.city = 'ah';
+// bt.log(obj2);
+//var s = " 中华人民共和国人 ";
