@@ -1,6 +1,6 @@
 {
   "name": "bt-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "bt utils",
   "main": "index.js",
   "scripts": {
