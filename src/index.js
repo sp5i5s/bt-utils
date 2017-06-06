@@ -34,5 +34,3 @@ base.prototype = {
 	W.bt = new base();
 
 })(window);
-
-bt.log(window);
