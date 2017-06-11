@@ -1,6 +1,6 @@
 var base  = require('./base')
 
-class other extends base{
+class tool extends base{
 
     constructor(){
 		super();
@@ -21,6 +21,7 @@ class other extends base{
         var a = Math.random, b = parseInt;  
         return Number(new Date()).toString() + b(10 * a()) + b(10 * a()) + b(10 * a());  
     }
+    
 }
 
-module.exports = other.prototype;
+module.exports = tool.prototype;

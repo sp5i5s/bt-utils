@@ -53,8 +53,7 @@ class https extends base{
     }
     // post类型下的通用方法
     _post(_args,_fn){
-        let conf = { 'Content-Type' : conf };
-        axios[this.type](_args.url,qs.stringify(_args.data),conf).then((result)=>{
+        axios[this.type](_args.url,qs.stringify(_args.data),this.conf).then((result)=>{
             return _fn ? _fn(result) : result;
         });
     }

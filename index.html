@@ -11,22 +11,57 @@
 	<script type="text/javascript" src="build/utils.bundle.js"></script>
 	<style>
 		dfdf{right: 0px;}
+		.st{color:#ff0000;}
+		.tt{font-size: 20px;}
+		.ss{color:blueviolet;}
+		.pd{padding:20px;}
 	</style>
 </head>
 <body>
-<button id="btn">Button</button>
+<p id="txt">text</p>
+<button id="btn" class="tt">Add Class</button>
+<button id="btn2" class="tt">remove Class</button>
 <script>
-	// function func(){
-	// 	alert('init');
-	// }
-	// var btn = bt.dom.byId('btn');
-	// bt.event.add(btn,'click',func)
+	function func(){
+		//alert('init');
+		// var btn = bt.dom.addClass(bt.dom.byId('btn'),'st').innerHTML = 'ok';
+		// bt.log(btn)
+		// let btn = bt.dom.get('btn').addClass('ss').valueOf.innerHTML = "brandon";
+		// let btn2 = bt.dom.get('btn2').addClass('st').valueOf.innerHTML = 'tony';
+		// bt.log(btn);
+		// bt.log(btn2);
+		let btn = bt.dom.get('btn');
+		
+		btn.addClass('st');
+		bt.dom.get('btn2').addClass('ss');
+		bt.dom.get('.tt').addClass('pd');
+		bt.dom.get('txt').show();
+	}
+	var btn = bt.dom.byId('#btn');
+	bt.event.add(btn,'click',func)
+
+	let btn2 = bt.dom.byId('#btn2');
+	bt.event.add(btn2,'click',function(){
+		bt.dom.get('.tt').removeClass('pd');
+		bt.dom.get('txt').hide();
+	})
+	
+
+
 	// var arr = ['js','java','php'];
 	// bt.log(bt.window.isMobile())
 	// bt.log(bt.window.width);
 	// bt.log(bt.window.height);
 	// bt.log(bt.other.uniqueId)
 	// bt.log(bt);
+	let text = '配置jqGrid表格根据页面宽度动态适配，两个参数分别为表格id与表格所在父容器的id，通过动态匹配父容器宽度来实现';
+	// bt.log(text.getStringOverflow(30,''));
+	// bt.log(bt)
+	bt.cookie.set('name','brandon');
+	bt.cookie.set('mobile','18021071789');
+
+	bt.dom.get('txt').valueOf.innerHTML = bt.cookie.get('name');
+	bt.log(bt.cookie.get('mobile'));
 </script>
 </body>
 </html>

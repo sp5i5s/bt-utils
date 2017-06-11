@@ -10,6 +10,14 @@ for(let fn in res.default){
     }
 }
 
+ // 文本超长隐藏
+p.getStringOverflow = function(_length = 20,_tag = '...'){
+    if(this.length > _length){
+        return this.substring(0,_length - _tag.length) + _tag;
+    }
+    return this;
+}
+
 class string extends base{
     constructor(){
 		  super();
