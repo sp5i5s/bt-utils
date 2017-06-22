@@ -15,6 +15,7 @@
 		.tt{font-size: 20px;}
 		.ss{color:blueviolet;}
 		.pd{padding:20px;}
+		.hide{bottom:-25px;}
 	</style>
 </head>
 <body>
@@ -45,7 +46,7 @@
 		bt.dom.get('.tt').removeClass('pd');
 		bt.dom.get('txt').hide();
 	})
-	
+
 
 
 	// var arr = ['js','java','php'];
@@ -62,6 +63,55 @@
 
 	bt.dom.get('txt').valueOf.innerHTML = bt.cookie.get('name');
 	bt.log(bt.cookie.get('mobile'));
+
+	var fn = function(n){
+		var arr = [];
+		function add(){
+			let rane = parseInt(Math.random() * 10 + 1);
+			if(arr.indexOf(rane) > -1){
+				add();
+			}else{
+				arr.push(rane);
+			}
+			
+		}
+		for(let i = 0;i< n;i++){
+			add();
+		}
+		
+		return arr;
+	};
+	var a = fn(6);
+	bt.log(a.sort(function(a,b){
+		return a > b ? true : false;
+	}).toString());
+
+	bt.log(Boolean(null));
+
+	bt.log(bt);
 </script>
+
+
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = '//static.meiqia.com/dist/meiqia.js?_=t';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+
+    _MEIQIA('entId', 61391);
+	
+	_MEIQIA('allSet', function(){
+		_MEIQIA('showPanel');
+		bt.dom.get('MEIQIA-PANEL-HOLDER').valueOf.style = 'bottom:-25px;visibility:visible';
+	});
+</script>
+
 </body>
 </html>
