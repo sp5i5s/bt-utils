@@ -10,7 +10,7 @@
 	</script>
 	<script type="text/javascript" src="build/utils.bundle.js"></script>
 	<style>
-		dfdf{right: 0px;}
+		.dfdf{right: 0px;}
 		.st{color:#ff0000;}
 		.tt{font-size: 20px;}
 		.ss{color:blueviolet;}
@@ -23,31 +23,29 @@
 <button id="btn" class="tt">Add Class</button>
 <button id="btn2" class="tt">remove Class</button>
 <script>
-	function func(){
-		//alert('init');
-		// var btn = bt.dom.addClass(bt.dom.byId('btn'),'st').innerHTML = 'ok';
-		// bt.log(btn)
-		// let btn = bt.dom.get('btn').addClass('ss').valueOf.innerHTML = "brandon";
-		// let btn2 = bt.dom.get('btn2').addClass('st').valueOf.innerHTML = 'tony';
-		// bt.log(btn);
-		// bt.log(btn2);
-		let btn = bt.dom.get('btn');
+	// function func(){
+	// 	//alert('init');
+	// 	// var btn = bt.dom.addClass(bt.dom.byId('btn'),'st').innerHTML = 'ok';
+	// 	// bt.log(btn)
+	// 	// let btn = bt.dom.get('btn').addClass('ss').valueOf.innerHTML = "brandon";
+	// 	// let btn2 = bt.dom.get('btn2').addClass('st').valueOf.innerHTML = 'tony';
+	// 	// bt.log(btn);
+	// 	// bt.log(btn2);
+	// 	let btn = bt.dom.get('btn');
 		
-		btn.addClass('st');
-		bt.dom.get('btn2').addClass('ss');
-		bt.dom.get('.tt').addClass('pd');
-		bt.dom.get('txt').show();
-	}
-	var btn = bt.dom.byId('#btn');
-	bt.event.add(btn,'click',func)
+	// 	btn.addClass('st');
+	// 	bt.dom.get('btn2').addClass('ss');
+	// 	bt.dom.get('.tt').addClass('pd');
+	// 	bt.dom.get('txt').show();
+	// }
+	// var btn = bt.dom.byId('#btn');
+	// bt.event.add(btn,'click',func)
 
-	let btn2 = bt.dom.byId('#btn2');
-	bt.event.add(btn2,'click',function(){
-		bt.dom.get('.tt').removeClass('pd');
-		bt.dom.get('txt').hide();
-	})
-
-
+	// let btn2 = bt.dom.byId('#btn2');
+	// bt.event.add(btn2,'click',function(){
+	// 	bt.dom.get('.tt').removeClass('pd');
+	// 	bt.dom.get('txt').hide();
+	// })
 
 	// var arr = ['js','java','php'];
 	// bt.log(bt.window.isMobile())
@@ -55,62 +53,62 @@
 	// bt.log(bt.window.height);
 	// bt.log(bt.other.uniqueId)
 	// bt.log(bt);
-	let text = '配置jqGrid表格根据页面宽度动态适配，两个参数分别为表格id与表格所在父容器的id，通过动态匹配父容器宽度来实现';
+	// let text = '配置jqGrid表格根据页面宽度动态适配，两个参数分别为表格id与表格所在父容器的id，通过动态匹配父容器宽度来实现';
 	// bt.log(text.getStringOverflow(30,''));
 	// bt.log(bt)
-	bt.cookie.set('name','brandon');
-	bt.cookie.set('mobile','18021071789');
+	// bt.cookie.set('name','brandon');
+	// bt.cookie.set('mobile','18021071789');
 
-	bt.dom.get('txt').valueOf.innerHTML = bt.cookie.get('name');
-	bt.log(bt.cookie.get('mobile'));
+	// bt.dom.get('txt').valueOf.innerHTML = bt.cookie.get('name');
+	// bt.log(bt.cookie.get('mobile'));
 
-	var fn = function(n){
-		var arr = [];
-		function add(){
-			let rane = parseInt(Math.random() * 10 + 1);
-			if(arr.indexOf(rane) > -1){
-				add();
-			}else{
-				arr.push(rane);
-			}
+	// var fn = function(n){
+	// 	var arr = [];
+	// 	function add(){
+	// 		let rane = parseInt(Math.random() * 10 + 1);
+	// 		if(arr.indexOf(rane) > -1){
+	// 			add();
+	// 		}else{
+	// 			arr.push(rane);
+	// 		}
 			
-		}
-		for(let i = 0;i< n;i++){
-			add();
-		}
+	// 	}
+	// 	for(let i = 0;i< n;i++){
+	// 		add();
+	// 	}
 		
-		return arr;
-	};
-	var a = fn(6);
-	bt.log(a.sort(function(a,b){
-		return a > b ? true : false;
-	}).toString());
+	// 	return arr;
+	// };
+	// var a = fn(6);
+	// bt.log(a.sort(function(a,b){
+	// 	return a > b ? true : false;
+	// }).toString());
 
-	bt.log(Boolean(null));
+	// bt.log(Boolean(null));
 
-	bt.log(bt);
+	// bt.log(bt);
 </script>
 
 
 <script type='text/javascript'>
-    (function(m, ei, q, i, a, j, s) {
-        m[i] = m[i] || function() {
-            (m[i].a = m[i].a || []).push(arguments)
-        };
-        j = ei.createElement(q),
-            s = ei.getElementsByTagName(q)[0];
-        j.async = true;
-        j.charset = 'UTF-8';
-        j.src = '//static.meiqia.com/dist/meiqia.js?_=t';
-        s.parentNode.insertBefore(j, s);
-    })(window, document, 'script', '_MEIQIA');
+    // (function(m, ei, q, i, a, j, s) {
+    //     m[i] = m[i] || function() {
+    //         (m[i].a = m[i].a || []).push(arguments)
+    //     };
+    //     j = ei.createElement(q),
+    //         s = ei.getElementsByTagName(q)[0];
+    //     j.async = true;
+    //     j.charset = 'UTF-8';
+    //     j.src = '//static.meiqia.com/dist/meiqia.js?_=t';
+    //     s.parentNode.insertBefore(j, s);
+    // })(window, document, 'script', '_MEIQIA');
 
-    _MEIQIA('entId', 61391);
+    // _MEIQIA('entId', 61391);
 	
-	_MEIQIA('allSet', function(){
-		_MEIQIA('showPanel');
-		bt.dom.get('MEIQIA-PANEL-HOLDER').valueOf.style = 'bottom:-25px;visibility:visible';
-	});
+	// _MEIQIA('allSet', function(){
+	// 	_MEIQIA('showPanel');
+	// 	//bt.dom.get('MEIQIA-PANEL-HOLDER').valueOf.style = 'bottom:-25px;visibility:visible';
+	// });
 </script>
 
 </body>

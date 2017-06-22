@@ -4,17 +4,17 @@ var rules = {
 	// 是否为空
 	empty : function(value){
 		if(!value){
-			return false;
+			return true;
 		}
 		if (value.toString().trim().replace(/(^s*)|(s*$)/g, "").length == 0 ){
-        	return false;
+        	return true;
 		}
-		return true;
+		return false;
 	},
 	// 是否为数字
 	number : function(value){
-		let patter = /^\d{1,}$/;
-		return patter.test(value);
+		let patter = /^[\d/.]{1,}$/;
+		return ! isNaN(value) && patter.test(value);
 	},
 	// 就否是手机号
 	mobile : function(value){

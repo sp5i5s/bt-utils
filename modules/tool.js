@@ -10,7 +10,7 @@ class tool extends base{
         return new Date(parseInt(_ns)).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");
     }
     // 静态分页
-    setPage(_page_no, _page_size, _array) {  
+    setPage(_array,_page_no, _page_size) {  
         let offset = (_page_no - 1) * _page_size;  
         return (offset + _page_size >= _array.length) ? 
                 _array.slice(offset, _array.length) :

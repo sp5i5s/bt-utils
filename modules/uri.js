@@ -20,6 +20,7 @@ class uri extends base{
         if(w.length > 1){
             var pairs = w[1].split("&");
             args.host = w[0];
+            args.query = {};
         }
         
         for (var i = 0; i < pairs.length; i++) {  
@@ -27,7 +28,7 @@ class uri extends base{
             if (pos == -1) continue;
             var argname = pairs[i].substring(0, pos);
             var value = pairs[i].substring(pos + 1);
-            args[argname] = decodeURI(value);  
+            args.query[argname] = decodeURI(value);  
         }
         return args;
     }
