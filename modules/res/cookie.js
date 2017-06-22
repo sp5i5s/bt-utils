@@ -39,7 +39,7 @@ var cookie = {
     remove : function(name, path, domain){  
         if(!name) return false;//如果没有name则返回false  
         if(name == "") return false;//如果name为空则返回false  
-        if(!this.Get(name)) return false;//如果要删除的name值不存在则返回false  
+        if(!this.get(name)) return false;//如果要删除的name值不存在则返回false  
         /*合并Cookie的相关值*/  
         document.cookie = name+"=;"  
                           + ((path) ? "path="+path+";" : "")  
