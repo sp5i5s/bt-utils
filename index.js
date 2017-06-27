@@ -16,7 +16,6 @@ var _window = require('./modules/window');
 var _cookie = require('./modules/res/cookie');
 
 let container = function(){};
-
 container.prototype = {
 	constructor : base,
 	https : https,

@@ -24,9 +24,18 @@ class dom extends base{
     // 根据Name获取相关DOM
     byName(_name){
         let list = document.getElementsByName(_name);
-        if(list.length > 0)
-            return Array.from(list);
-        return null;
+        if(list.length > 0){
+            this._object = Array.from(list);
+        }
+        return this;
+    }
+    // 根据TagName获取相关DOM
+    byTagName(_name){
+        let list = document.getElementsByTagName(_name);
+        if(list.length > 0){
+            this._object = Array.from(list);
+        }
+        return this;
     }
     // 返回dom原型
     get valueOf(){
@@ -71,6 +80,19 @@ class dom extends base{
     // 显示DOM
     show(){
         this._hide_show('block');
+    }
+    set html(_value){
+        this._dom_ctrols((info)=>{
+            info.innerHTML = _value;
+        })
+        return this;
+    }
+    get html(){
+        let _html = null;
+        this._dom_ctrols((info)=>{
+             _html = info.innerHTML;
+        });
+        return _html
     }
 }
 
