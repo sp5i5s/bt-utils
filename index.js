@@ -34,4 +34,4 @@ container.prototype = {
 
 ~function(W){
 	W.bt = new container();
-}(window);
+}(global || window);
