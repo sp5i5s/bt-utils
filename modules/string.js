@@ -28,7 +28,10 @@ class string extends base{
         var reg = new RegExp(old_value,"g"); 
         return str.replace(reg, new_value); 
     }
-    // 计算文本长度
+    clearHtml(str){
+        var reTag = /<(?:.|\s)*?>/g;
+        return str.replace(reTag,"");
+    }
 }
 
 module.exports = string.prototype
